@@ -11,10 +11,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hello</h1>
-        <Login />
-      </header>
       <Router>
         <div>
           {/* A <Switch> looks through its children <Route>s and
@@ -25,11 +21,7 @@ function App() {
             </Route>
 
             <Route path="/">
-              <ul>
-                <li>
-                  <Link to="/monthlyView">Home</Link>
-                </li>
-              </ul>
+               <Login />
             </Route>
           </Switch>
         </div>
