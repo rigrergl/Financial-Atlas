@@ -1,8 +1,17 @@
 import React from "react";
 import Prize from "./Prize";
 import Row from "react-bootstrap/Row";
+import {useState} from "react"
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setWon,
+} from "../../redux/actions";
+import { useHistory } from "react-router-dom";
 
 export default function PrizeList() {
+  const dispatch = useDispatch();
+  let history = useHistory();
+
   let prizes = [
     {
       id: 1,
@@ -29,10 +38,16 @@ export default function PrizeList() {
 
   const buyPrize = (e) => {
     // console.log(prizes[e.target.id - 1].bought)
-    prizes[e.target.id - 1].bought = true;
+    // prizes[e.target.id - 1].bought = true;
     // console.log(prizes);
-    // prizes = prizes.splice(1, e.target.id - 1);
+    prizes = prizes.splice(1, e.target.id - 1);
     console.log(prizes);
+
+    if(prizes.length == 0){
+      dispatch(setWon());
+      console.log("won")
+      history.push("/Win");
+    }
   };
 
   return (
