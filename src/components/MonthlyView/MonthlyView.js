@@ -14,6 +14,8 @@ import PrizeList from "./PrizeList";
 import SavingsOpen from "./SavingsOpen"
 import Income from "./Income"
 
+import Transfer from "./Transfer";
+import Welcome from "./Welcome";
 import "../../styles/MonthlyView.css";
 
 import { useEffect } from "react";
@@ -96,6 +98,7 @@ export default function MonthlyView() {
           </div>
           
           <PrizeList />
+          <Welcome />
         </Container>
       </div>
     </div>
