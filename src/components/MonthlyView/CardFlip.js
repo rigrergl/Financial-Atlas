@@ -49,7 +49,7 @@ const CardFlip = () => {
               />
             </div>
             <div className="flip-card-back">
-              <Transfer destination="Bills" />
+              <Transfer destination="debt" />
             </div>
           </div>
         </div>

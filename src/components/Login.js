@@ -12,7 +12,7 @@ const Login = () => {
   return (
     <div className="login">
       <Form style={{ width: "40vh" }}>
-        <h1 style={{ margin: "0 auto" }}>Sign-In</h1>
+        <h1 style={{ margin: "0 auto", marginBottom:"10px" }}>Sign-In</h1>
         <Row>
           <Col
             style={{
