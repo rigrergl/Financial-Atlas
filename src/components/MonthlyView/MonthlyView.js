@@ -9,6 +9,7 @@ import Row from "react-bootstrap/Row";
 import Checking from "./Checking";
 import Savings from "./Savings";
 import Transfer from "./Transfer";
+import Welcome from "./Welcome";
 import "../../styles/MonthlyView.css";
 
 export default function MonthlyView() {
@@ -27,7 +28,7 @@ export default function MonthlyView() {
           <div className="advanceButtonContainer">
             <Button className="advanceButton">Advance Month</Button>
           </div>
-          <Transfer />
+          <Welcome />
         </Container>
       </div>
     </div>

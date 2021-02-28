@@ -1,11 +1,14 @@
 import React from "react";
-import Transfer from "./Transfer";
+import Heading from "./Heading";
+import "../../styles/MonthlyView.css";
+import CardFlip from "./CardFlip";
 
 const Welcome = () => {
   return (
-    <div>
+    <div className="welcome-container">
       <Heading />
-      <div></div>
+      <p>Which account would you like to access?</p>
+      <CardFlip />
     </div>
   );
 };

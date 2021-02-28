@@ -1,18 +1,82 @@
 .advanceButtonContainer {
-    text-align: center !important;
+  text-align: center !important;
 }
 
 .advanceButton {
-    background-color: var(--primary-color) !important;
-    /* background-color: green !important; */
+  background-color: var(--primary-color) !important;
+  /* background-color: green !important; */
 }
 
 .money {
-    font-size: 5vw;
-    color: var(--primary-color);
+  font-size: 5vw;
+  color: var(--primary-color);
 }
 
 .accountTitle {
-    font-size: 2vw;
-    margin-bottom: 0;
+  font-size: 2vw;
+  margin-bottom: 0;
 }
+
+/* Welcome CSS Below */
+.flip-main-container {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+.welcome-container {
+  height: 50vh;
+  width: 60%;
+  margin: auto;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 410px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.HooverIt:hover {
+  width: 100%;
+  height: 100%;
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border: 2px solid #6b8eff;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: dodgerblue;
+  color: black;
+}
+.flip-card-front h1 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+}
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Welcome CSS Above */

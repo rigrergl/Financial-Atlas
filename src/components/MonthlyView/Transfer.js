@@ -19,12 +19,8 @@ const Transfer = () => {
           <InputGroup.Text>.00</InputGroup.Text>
         </InputGroup.Append>
       </InputGroup>
-      <Button variant="outline-danger" style={{ marginRight: "5px" }}>
-        Cancel
-      </Button>{" "}
-      <Button variant="outline-info" style={{ marginRight: "5px" }}>
-        Transfer
-      </Button>{" "}
+      <Button variant="danger">Cancel</Button>{" "}
+      <Button variant="success">Transfer</Button>{" "}
     </div>
   );
 };

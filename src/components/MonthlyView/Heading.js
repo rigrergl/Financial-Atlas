@@ -18,7 +18,6 @@ function Heading() {
       <h1 className="heading">
         {greeting}, <i>user</i>{" "}
       </h1>
-      <p>How much money would you like to transfer today?</p>
     </div>
   );
 }
