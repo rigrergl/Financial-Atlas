@@ -9,6 +9,7 @@ import Row from "react-bootstrap/Row";
 import Checking from "./Checking";
 import Savings from "./Savings";
 import Debt from "./Debt";
+import Prize from "./Prize";
 
 import "../../styles/MonthlyView.css";
 
@@ -42,6 +43,7 @@ export default function MonthlyView() {
           <div className="advanceButtonContainer">
             <Button onClick={() => dispatch(increment())} className="advanceButton">Advance Month</Button>
           </div>
+          <Prize />
         </Container>
       </div>
     </div>
