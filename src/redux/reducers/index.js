@@ -4,6 +4,7 @@ import savingsAmtReducer from "./savingsAmt";
 import lostReducer from "./lost";
 import wonReducer from "./won";
 import roundReducer from "./round"
+import prizeReducer from "./prizes"
 
 import { combineReducers } from "redux";
 
@@ -14,6 +15,7 @@ const allReducers = combineReducers({
   savingsAmt: savingsAmtReducer,
   lost: lostReducer,
   won: wonReducer,
+  prizes: prizeReducer,
 });
 
 export default allReducers;

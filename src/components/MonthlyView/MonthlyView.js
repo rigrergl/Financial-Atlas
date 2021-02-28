@@ -28,6 +28,7 @@ export default function MonthlyView() {
  
   let isSavingsOpen = round === 0;
   const MONTHLY_INCOME = 1000;
+  const MAX_DEBT = 25000;
 
   // const converter = 1;
   // const roundNumber = round / converter;
@@ -44,7 +45,10 @@ export default function MonthlyView() {
     dispatch(incrementDebt());
     dispatch(decrementRound());
     dispatch(accrueSavingsInterest());
+    
     earnIncome();
+    checkLost();
+    checkWon();
   };
 
   const earnIncome = () => {
@@ -52,6 +56,14 @@ export default function MonthlyView() {
     for(i = 0; i < MONTHLY_INCOME; i++){
       dispatch(incrementChecking());
     }
+  }
+
+  const checkLost = () => {
+      //TODO
+  }
+
+  const checkWon = () => {
+    //TODO
   }
 
   return (
@@ -66,7 +78,7 @@ export default function MonthlyView() {
 
           <SavingsOpen isSavingsOpen={isSavingsOpen} round={round}/>
 
-          <Debt />
+          <Debt MAX_DEBT={MAX_DEBT}/>
 
           <div className="advanceButtonContainer">
             <Button onClick={advanceMonth} className="advanceButton">

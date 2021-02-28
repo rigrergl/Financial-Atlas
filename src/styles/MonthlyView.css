@@ -22,6 +22,11 @@
     color: var(--primary-color);
 }
 
+.prizePrice {
+    font-size: 2vw;
+    color: var(--primary-color);
+}
+
 
 /* Prizes CSS Below */
 .bottom {

@@ -65,4 +65,11 @@ export const setWon = () => {
   };
 };
 
+//Prizes
+export const decrementPrizes = () => {
+  return {
+    type: "DECREMENT_PRIZES",
+  };
+};
+
 
