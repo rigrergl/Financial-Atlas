@@ -10,14 +10,14 @@ const Login = () => {
             <legend>Welcome</legend>
             <label>
               First Name
-              <input type="text" />
+              <input className="input" type="text" />
             </label>
             <label>
               Last Name
-              <input type="text" />
+              <input className="input" type="text" />
             </label>
             <br />
-            <button>Submit</button>
+            <button className="button" >Submit</button>
           </fieldset>
         </form>
       </div>
