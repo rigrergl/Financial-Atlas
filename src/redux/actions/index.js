@@ -1,10 +1,3 @@
-//debt
-export const incrementDebt = () => {
-  return {
-    type: "INCREMENT_DEBT",
-  };
-};
-
 //round
 export const decrementRound = () => {
   return {

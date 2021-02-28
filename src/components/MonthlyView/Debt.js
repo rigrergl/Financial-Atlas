@@ -8,14 +8,14 @@ export default function Debt() {
   const debt = useSelector((state) => state.debt);
 
   const MAX_DEBT = 25000;
-  const debtPercentage = debt / MAX_DEBT;
+  const debtRatio = debt / MAX_DEBT;
 
   return (
     <div>
       <ProgressBar
         variant="danger"
         animated
-        now={debtPercentage * 100}
+        now={debtRatio * 100}
         label={`Debt: \$${debt}`}
       />
     </div>
