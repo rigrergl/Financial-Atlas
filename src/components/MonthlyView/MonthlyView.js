@@ -10,16 +10,23 @@ import Checking from "./Checking";
 import Savings from "./Savings";
 import Debt from "./Debt";
 import Prize from "./Prize";
+import Round from "./Round"
 
 import "../../styles/MonthlyView.css";
 
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { increment } from "../../redux/actions";
+import { useSelector, useDispatch } from "react-redux";
+import { incrementDebt, decrementRound } from "../../redux/actions";
+
 
 export default function MonthlyView() {
-  const savingsAmt = 2555;
-  const checkingAmt = 1354;
+  const debt = useSelector((state) => state.debt);
+  const savingsAmt = useSelector((state) => state.savingsAmt);
+  const checkingAmt = useSelector((state) => state.checkingAmt);
+  const round = useSelector((state) => state.round);
+
+  const converter = 1;
+  const roundNumber = round / converter;
 
   // useEffect(() => {
   //   fetch("http://localhost:9090/test").then(async (res) =>
@@ -28,6 +35,11 @@ export default function MonthlyView() {
   // }, []);
 
   const dispatch = useDispatch();
+
+  const advanceMonth = () => {
+    dispatch(incrementDebt());
+    dispatch(decrementRound());
+  };
 
   return (
     <div>
@@ -38,10 +50,15 @@ export default function MonthlyView() {
             <Checking checkingAmt={checkingAmt} />
           </Row>
 
+          <Round round={roundNumber}/>
+          <h1>{roundNumber}</h1>
+
           <Debt />
 
           <div className="advanceButtonContainer">
-            <Button onClick={() => dispatch(increment())} className="advanceButton">Advance Month</Button>
+            <Button onClick={advanceMonth} className="advanceButton">
+              Advance Month
+            </Button>
           </div>
           <Prize />
         </Container>

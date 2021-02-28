@@ -1,5 +1,12 @@
-export const increment = () => {
+export const incrementDebt = () => {
   return {
-    type: "INCREMENT",
+    type: "INCREMENT_DEBT",
+  };
+};
+
+
+export const decrementRound = () => {
+  return {
+    type: "DECREMENT_ROUND",
   };
 };
