@@ -1,4 +1,7 @@
 import React from "react";
+// Import for react router
+import { Link } from "react-router-dom";
+// Imports from Bootstrap and CSS
 import "../styles/login.css";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -34,7 +37,14 @@ const Login = () => {
         </Row>
       </Form>
       <Form>
-        <Button type="submit">Sign in</Button>
+        <Button type="submit">
+          <Link
+            to="/MonthlyView"
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            Sign In
+          </Link>
+        </Button>
       </Form>
     </div>
   );
