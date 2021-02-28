@@ -5,6 +5,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import MonthlyView from "./components/MonthlyView/MonthlyView";
 import reportWebVitals from "./reportWebVitals";
+import Win from "./components/EndPages/Win"
+import Lose from "./components/EndPages/Lose"
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -16,11 +18,19 @@ function App() {
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/monthlyView">
+            <Route exact path="/monthlyView">
               <MonthlyView />
             </Route>
 
-            <Route path="/">
+            <Route exact path="/lose">
+              <Lose />
+            </Route>
+
+            <Route exact path="/win">
+              <Win />
+            </Route>
+
+            <Route exact path="/">
                <Login />
             </Route>
           </Switch>
