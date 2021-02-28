@@ -43,13 +43,13 @@ const CardFlip = () => {
             <div className="flip-card-front">
               <h1>Pay Debt</h1>
               <img
-                src="/debt.jpg"
+                src="/bills.png"
                 alt="Avatar"
                 style={{ width: "296px", height: "310px", marginLeft: "0" }}
               />
             </div>
             <div className="flip-card-back">
-              <Transfer destination="debt" />
+              <Transfer destination="Bills" />
             </div>
           </div>
         </div>
