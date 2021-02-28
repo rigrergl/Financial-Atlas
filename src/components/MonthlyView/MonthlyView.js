@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory  } from "react-router-dom";
 
 //Bootsrap components
 import Button from "react-bootstrap/Button";
@@ -29,6 +30,8 @@ export default function MonthlyView() {
   let isSavingsOpen = round === 0;
   const MONTHLY_INCOME = 1000;
   const MAX_DEBT = 25000;
+  const MONTHLY_DEBT = 5000;
+  let history = useHistory();
 
   // const converter = 1;
   // const roundNumber = round / converter;
@@ -48,6 +51,7 @@ export default function MonthlyView() {
     
     earnIncome();
     checkLost();
+    accrueDebt();
   };
 
   const earnIncome = () => {
@@ -57,8 +61,18 @@ export default function MonthlyView() {
     }
   }
 
+  const accrueDebt = () => {
+
+    let i;
+    for(i = 0; i < MONTHLY_DEBT; i++)
+      dispatch(incrementDebt());
+  }
+
   const checkLost = () => {
-      //TODO
+      if(debt > MAX_DEBT){
+        console.log("lost")
+        history.push('/lose')
+      }
   }
 
   return (
