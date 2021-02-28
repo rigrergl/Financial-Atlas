@@ -1,4 +1,4 @@
-const roundNumber = (state = 3, action) => {
+const round = (state = 3, action) => {
     switch(action.type){
         case 'DECREMENT_ROUND':
             return state===0? 3 : state - 1;
@@ -6,4 +6,4 @@ const roundNumber = (state = 3, action) => {
             return state;
     }
 }
-export default roundNumber;
+export default round;

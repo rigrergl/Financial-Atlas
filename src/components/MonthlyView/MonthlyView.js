@@ -20,13 +20,14 @@ import { incrementDebt, decrementRound } from "../../redux/actions";
 
 
 export default function MonthlyView() {
+  const round = useSelector((state) => state.round);
   const debt = useSelector((state) => state.debt);
   const savingsAmt = useSelector((state) => state.savingsAmt);
   const checkingAmt = useSelector((state) => state.checkingAmt);
-  const round = useSelector((state) => state.round);
+ 
 
-  const converter = 1;
-  const roundNumber = round / converter;
+  // const converter = 1;
+  // const roundNumber = round / converter;
 
   // useEffect(() => {
   //   fetch("http://localhost:9090/test").then(async (res) =>
@@ -50,8 +51,8 @@ export default function MonthlyView() {
             <Checking checkingAmt={checkingAmt} />
           </Row>
 
-          <Round round={roundNumber}/>
-          <h1>{roundNumber}</h1>
+          <h1>{`Debt: ${debt}`}</h1>
+          <h1>{`Round: ${round}`}</h1>
 
           <Debt />
 
