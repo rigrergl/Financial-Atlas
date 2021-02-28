@@ -1,7 +1,7 @@
 const won = (state = false, action) => {
   switch (action.type) {
-    case "SET_LOST":
-      return !state;
+    case "SET_WON":
+      return true;
     default:
       return state;
   }

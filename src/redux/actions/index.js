@@ -45,4 +45,31 @@ export const decrementChecking = () => {
   };
 };
 
+//Debt
+export const incrementDebt = () => {
+  return {
+    type: "INCREMENT_DEBT",
+  };
+};
+
+export const decrementDebt = () => {
+  return {
+    type: "DECREMENT_DEBT",
+  };
+};
+
+//Lost
+export const setLost = () => {
+  return {
+    type: "SET_LOST",
+  };
+};
+
+//Won
+export const setWon = () => {
+  return {
+    type: "SET_WON",
+  };
+};
+
 
