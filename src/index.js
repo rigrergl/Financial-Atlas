@@ -4,44 +4,51 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
-import store from './redux/store'
-import { Provider } from 'react-redux'
+
+import {createStore} from 'redux';
+// import store from "./redux/store";
+// import { Provider } from "react-redux";
 
 //Things to keep in store: Debt, CheckingAmt, SavingsAmt
 
 //ACTIONS
 const increment = () => {
   return {
-    type: 'INCREMENT'
-  }
-}
+    type: "INCREMENT",
+  };
+};
 
 const decrement = () => {
   return {
-    type: 'DECREMENT'
-  }
-}
+    type: "DECREMENT",
+  };
+};
 
 //REDUCER
-const debt = (state =0, action) => {
-  switch(action.type){
-    case 'INCREMENT':
+const debt = (state = 0, action) => {
+  switch (action.type) {
+    case "INCREMENT":
       return state + 1;
-    case 'DECREMENT':
-      return state -1;
+    case "DECREMENT":
+      return state - 1;
   }
-}
+};
 
 let store = createStore(debt);
 
+//display it in the console
+store.subscribe(() => console.log(store.getState()));
+
 //DISPATCH
+store.dispatch(increment());
+store.dispatch(increment());
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    {/* <Provider store={store}> */}
       <App />
-    </Provider>
+    {/* </Provider> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
