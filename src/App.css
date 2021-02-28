@@ -37,9 +37,3 @@
     transform: rotate(360deg);
   }
 }
-
-.main {
-  border: 1px solid pink;
-  height: 20vh;
-  width: 40vh;
-}
