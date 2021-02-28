@@ -17,7 +17,10 @@ const Login = () => {
               <input className="input" type="text" />
             </label>
             <br />
-            <button className="button" >Submit</button>
+            <button className="button">
+              {" "}
+              <a href="./components/MonthlyView/MonthyView">Submit</a>
+            </button>
           </fieldset>
         </form>
       </div>
