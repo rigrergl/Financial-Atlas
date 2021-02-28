@@ -52,7 +52,7 @@ export default function MonthlyView() {
             <Checking checkingAmt={checkingAmt} />
           </Row>
 
-          <SavingsOpen isSavingsOpen={isSavingsOpen} />
+          <SavingsOpen isSavingsOpen={isSavingsOpen} round={round}/>
 
           <Debt />
 
