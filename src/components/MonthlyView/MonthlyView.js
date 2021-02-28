@@ -30,7 +30,7 @@ import {
   decrementChecking,
 } from "../../redux/actions";
 
-export default function MonthlyView() {
+export default function MonthlyView( {firstName} ) {
   const round = useSelector((state) => state.round);
   const debt = useSelector((state) => state.debt);
   const savingsAmt = useSelector((state) => state.savingsAmt);
@@ -121,7 +121,7 @@ export default function MonthlyView() {
 
           <Debt MAX_DEBT={MAX_DEBT} />
 
-          <Welcome />
+          <Welcome firstName={firstName}/>
 
           <PrizeList />
         </Container>

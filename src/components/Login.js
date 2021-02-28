@@ -21,7 +21,7 @@ const Login = ( {handleClick} ) => {
               marginLeft: "5px",
             }}
           >
-            <Form.Control onSubmit={handleClick} placeholder="First name" />
+            <Form.Control onChange={handleClick} placeholder="First name" />
           </Col>
         </Row>
         <Row>

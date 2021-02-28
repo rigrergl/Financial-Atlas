@@ -12,10 +12,10 @@ import {useState} from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
-  const [firstName, setFirst] = useState("Dear Customer");
+  const [firstName, setFirstName] = useState("Dear Customer");
 
-  const handleClick = () => {
-
+  const handleClick = (e) => {
+    setFirstName(e.target.value);
   }
 
   return (
@@ -26,7 +26,7 @@ function App() {
             renders the first one that matches the current URL. */}
           <Switch>
             <Route exact path="/monthlyView">
-              <MonthlyView />
+              <MonthlyView firstName={firstName}/>
             </Route>
 
             <Route exact path="/lose">

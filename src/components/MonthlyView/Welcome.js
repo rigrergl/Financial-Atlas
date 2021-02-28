@@ -3,10 +3,10 @@ import Heading from "./Heading";
 import "../../styles/MonthlyView.css";
 import CardFlip from "./CardFlip";
 
-const Welcome = () => {
+const Welcome = ( {firstName} ) => {
   return (
     <div className="welcome-container">
-      <Heading />
+      <Heading firstName={firstName}/>
       <p>Which account would you like to access?</p>
       <CardFlip />
     </div>

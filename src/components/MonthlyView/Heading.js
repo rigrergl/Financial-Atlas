@@ -1,6 +1,6 @@
 import React from "react";
 
-function Heading() {
+function Heading( {firstName} ) {
   const date = new Date();
   const currentTime = date.getHours();
   let greeting;
@@ -16,7 +16,7 @@ function Heading() {
   return (
     <div>
       <h1 className="heading">
-        {greeting}, <i>user</i>{" "}
+        {greeting}, <i>{firstName}</i>{" "}
       </h1>
     </div>
   );
