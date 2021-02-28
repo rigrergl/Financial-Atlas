@@ -16,6 +16,8 @@ import {
 const Transfer = ({ destination }) => {
   const [value, setValue] = useState(0);
   const dispatch = useDispatch();
+  const round = useSelector((state) => state.round);
+  let isSavingsOpen = round === 0;
 
   const onSubmit = (e) => {
     console.log(value);
@@ -26,7 +28,7 @@ const Transfer = ({ destination }) => {
         dispatch(incrementSavings());
       }      
     }
-    else {
+    else if(isSavingsOpen){
       let i;
       for(i = 0; i < value; i++){
         dispatch(decrementSavings());
@@ -61,9 +63,10 @@ const Transfer = ({ destination }) => {
         </InputGroup.Append>
       </InputGroup>
       <Button variant="danger">Cancel</Button>{" "}
-      <Button onClick={onSubmit} variant="success">
+      {(!isSavingsOpen && destination=="Checking")? "": <Button onClick={onSubmit} variant="success">
         Transfer to {destination}
-      </Button>{" "}
+      </Button>}
+      
     </div>
   );
 };
