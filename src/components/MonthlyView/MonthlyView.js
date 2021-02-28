@@ -94,17 +94,7 @@ export default function MonthlyView() {
                 </Accordion.Toggle>
               </Card.Header>
               <Accordion.Collapse eventKey="0">
-                <Card.Body>Hello! I'm the body</Card.Body>
-              </Accordion.Collapse>
-            </Card>
-            <Card>
-              <Card.Header>
-                <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                  Click me!
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="1">
-                <Card.Body>Hello! I'm another body</Card.Body>
+                <Card.Body>The difference between checking accounts and saving accounts is very noticable ! Checking accounts earn lower interest rates than saving accounts, however they have access to debit card and check writting acceses. Saving accounts are still useful though ! The higher interest that one can gain from them is very useful for long term gains !</Card.Body>
               </Accordion.Collapse>
             </Card>
           </Accordion>
