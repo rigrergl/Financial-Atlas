@@ -7,11 +7,6 @@ import { decrementPrizes } from "../../redux/actions";
 import NumberFormat from "react-number-format";
 
 const Prize = () => {
-  const boughPrize = (e) => {};
-  const PRIZE1_COST = 5000;
-  const PRIZE2_COST = 10000;
-  const PRIZE3_COST = 20000;
-
   return (
     <div className="bottom-container">
       <div className="bottom">
@@ -26,7 +21,7 @@ const Prize = () => {
 
             <Card.Text>
               <NumberFormat
-                value={PRIZE1_COST}
+                value={25}
                 displayType={"text"}
                 thousandSeparator={true}
                 prefix={"$"}
@@ -47,7 +42,7 @@ const Prize = () => {
 
             <Card.Text>
               <NumberFormat
-                value={PRIZE2_COST}
+                value={25}
                 displayType={"text"}
                 thousandSeparator={true}
                 prefix={"$"}
@@ -68,7 +63,7 @@ const Prize = () => {
 
             <Card.Text>
               <NumberFormat
-                value={PRIZE3_COST}
+                value={25}
                 displayType={"text"}
                 thousandSeparator={true}
                 prefix={"$"}

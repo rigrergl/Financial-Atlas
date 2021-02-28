@@ -48,7 +48,6 @@ export default function MonthlyView() {
     
     earnIncome();
     checkLost();
-    checkWon();
   };
 
   const earnIncome = () => {
@@ -60,10 +59,6 @@ export default function MonthlyView() {
 
   const checkLost = () => {
       //TODO
-  }
-
-  const checkWon = () => {
-    //TODO
   }
 
   return (
