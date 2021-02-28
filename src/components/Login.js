@@ -8,7 +8,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 
-const Login = () => {
+const Login = ( {handleClick} ) => {
   return (
     <div className="login">
       <Form style={{ width: "40vh" }}>
@@ -21,7 +21,7 @@ const Login = () => {
               marginLeft: "5px",
             }}
           >
-            <Form.Control placeholder="First name" />
+            <Form.Control onSubmit={handleClick} placeholder="First name" />
           </Col>
         </Row>
         <Row>

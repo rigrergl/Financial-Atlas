@@ -95,7 +95,7 @@ export default function MonthlyView() {
               </Card.Header>
               <Accordion.Collapse eventKey="0">
                 <Card.Body>
-                  <p>The difference between checking accounrs and saving accounts is very noticable ! Checking accouns earn lower interest rates than saving accounts, however they have access to debit card and check writting acceses. Saving accounts are still useful thou ! The higher interest that one can gain from them is veryu useful for long term gains !</p>
+                  <p>The difference between checking accounts and saving accounts is very noticable ! Checking accounts earn lower interest rates than saving accounts, however they have access to debit card and check writing acceses. Saving accounts are still useful though ! The higher interest that one can gain from them is very useful for long term gains !</p>
                   <p>Debt and bills can be very scary if not mindful ! Good use of your savings and checking accounts and keeping a wary eye on those bills is a pathway to a debt free life !</p>
                   <p>Over 51% of students who learn how to manage their money well before college tend to pay for college by themselves ! Using mindful techniques and saving account plans can be the savior of student debt !</p>
                   <p>Always maintain a secure financial identity for yourself ! Keeping good preventative measures on your new shiny credit card will help keep identy theft away ! Always make sure to maintain secure accounts by trackign all transactions and chaning login passwords.</p>

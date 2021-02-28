@@ -7,10 +7,17 @@ import MonthlyView from "./components/MonthlyView/MonthlyView";
 import reportWebVitals from "./reportWebVitals";
 import Win from "./components/EndPages/Win"
 import Lose from "./components/EndPages/Lose"
+import {useState} from "react";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
+  const [firstName, setFirst] = useState("Dear Customer");
+
+  const handleClick = () => {
+
+  }
+
   return (
     <div className="App">
       <Router>
@@ -31,7 +38,7 @@ function App() {
             </Route>
 
             <Route exact path="/">
-               <Login />
+               <Login handleClick={handleClick}/>
             </Route>
           </Switch>
         </div>
