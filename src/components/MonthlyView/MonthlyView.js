@@ -24,8 +24,10 @@ export default function MonthlyView() {
             <Checking checkingAmt={checkingAmt} />
           </Row>
 
-          <div className="advanceButton">
-            <Button>Advance Month</Button>
+          
+
+          <div className="advanceButtonContainer">
+            <Button className="advanceButton">Advance Month</Button>
           </div>
         </Container>
       </div>

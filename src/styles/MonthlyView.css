@@ -1,5 +1,10 @@
+.advanceButtonContainer {
+  text-align: center !important;
+}
+
 .advanceButton {
-  text-align: right !important;
+    background-color: var(--primary-color) !important;
+    /* background-color: green !important; */
 }
 
 .money {
