@@ -17,7 +17,7 @@ import "../../styles/MonthlyView.css";
 
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { incrementDebt, decrementRound } from "../../redux/actions";
+import { incrementDebt, decrementRound, accrueSavingsInterest, incrementChecking, decrementChecking } from "../../redux/actions";
 
 
 export default function MonthlyView() {
@@ -27,6 +27,7 @@ export default function MonthlyView() {
   const checkingAmt = useSelector((state) => state.checkingAmt);
  
   let isSavingsOpen = round === 0;
+  const MONTHLY_INCOME = 1000;
 
   // const converter = 1;
   // const roundNumber = round / converter;
@@ -42,7 +43,16 @@ export default function MonthlyView() {
   const advanceMonth = () => {
     dispatch(incrementDebt());
     dispatch(decrementRound());
+    dispatch(accrueSavingsInterest());
+    earnIncome();
   };
+
+  const earnIncome = () => {
+    let i;
+    for(i = 0; i < MONTHLY_INCOME; i++){
+      dispatch(incrementChecking());
+    }
+  }
 
   return (
     <div>
@@ -50,6 +60,7 @@ export default function MonthlyView() {
         <Container>
           <Row style={{ paddingTop: "20px", paddingBottom: "70px" }}>
             <Savings savingsAmt={savingsAmt} />
+            <Income MONTHLY_INCOME={MONTHLY_INCOME}/>
             <Checking checkingAmt={checkingAmt} />
           </Row>
 
@@ -62,8 +73,6 @@ export default function MonthlyView() {
               Advance Month
             </Button>
           </div>
-
-          <Income />
           
           <Prize />
         </Container>

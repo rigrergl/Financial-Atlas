@@ -1,9 +1,7 @@
 import Card from "react-bootstrap/Card";
 import NumberFormat from 'react-number-format';
 
-export default function Income() {
-  const MONTHLY_INCOME = 2000;
-
+export default function Income( {MONTHLY_INCOME} ) {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Body>
