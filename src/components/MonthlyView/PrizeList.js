@@ -1,13 +1,8 @@
 import React from "react";
 import Prize from "./Prize";
-import Row from "react-bootstrap/Row"
+import Row from "react-bootstrap/Row";
 
 export default function PrizeList() {
-  const buyPrize = (e) => {
-      console.log("Bought Prize")
-      console.log(e.target.id)
-  };
-
   let prizes = [
     {
       id: 1,
@@ -32,14 +27,31 @@ export default function PrizeList() {
     },
   ];
 
+  const buyPrize = (e) => {
+    // console.log(prizes[e.target.id - 1].bought)
+    prizes[e.target.id - 1].bought = true;
+    // console.log(prizes);
+    // prizes = prizes.splice(1, e.target.id - 1);
+    console.log(prizes);
+  };
+
   return (
     <Row className="bottom">
       {prizes
         .filter((prize) => {
-          if (!prize.bought) return prize;
+          if (prize.bought != true) {
+            return prize;
+          } 
         })
-        .map(({ cost, name, src, id }) => (
-            <Prize key={id} id={id} cost={cost} name={name} src={src} buyPrize={buyPrize}/>
+        .map(({ cost, name, src, id, bought }) => (
+          <Prize
+            key={id}
+            id={id}
+            cost={cost}
+            name={name}
+            src={src}
+            buyPrize={buyPrize}
+          />
         ))}
     </Row>
   );
