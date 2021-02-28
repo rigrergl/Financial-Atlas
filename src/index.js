@@ -1,15 +1,49 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "bootstrap/dist/css/bootstrap.min.css";
+import store from './redux/store'
+import { Provider } from 'react-redux'
+
+//Things to keep in store: Debt, CheckingAmt, SavingsAmt
+
+//ACTIONS
+const increment = () => {
+  return {
+    type: 'INCREMENT'
+  }
+}
+
+const decrement = () => {
+  return {
+    type: 'DECREMENT'
+  }
+}
+
+//REDUCER
+const debt = (state =0, action) => {
+  switch(action.type){
+    case 'INCREMENT':
+      return state + 1;
+    case 'DECREMENT':
+      return state -1;
+  }
+}
+
+let store = createStore(debt);
+
+//DISPATCH
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
