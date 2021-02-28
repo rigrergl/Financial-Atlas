@@ -10,7 +10,7 @@ import Checking from "./Checking";
 import Savings from "./Savings";
 import Debt from "./Debt";
 import Prize from "./Prize";
-import Round from "./Round"
+import SavingsOpen from "./SavingsOpen"
 
 import "../../styles/MonthlyView.css";
 
@@ -25,6 +25,7 @@ export default function MonthlyView() {
   const savingsAmt = useSelector((state) => state.savingsAmt);
   const checkingAmt = useSelector((state) => state.checkingAmt);
  
+  let isSavingsOpen = round === 0;
 
   // const converter = 1;
   // const roundNumber = round / converter;
@@ -51,8 +52,7 @@ export default function MonthlyView() {
             <Checking checkingAmt={checkingAmt} />
           </Row>
 
-          <h1>{`Debt: ${debt}`}</h1>
-          <h1>{`Round: ${round}`}</h1>
+          <SavingsOpen isSavingsOpen={isSavingsOpen} />
 
           <Debt />
 
