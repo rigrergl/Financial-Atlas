@@ -21,7 +21,7 @@ const Transfer = ({ destination }) => {
 
   const onSubmit = (e) => {
     console.log(value);
-    if(destination=="Savings"){
+    if(destination==="Savings"){
       let i;
       for(i = 0; i < value; i++){
         dispatch(decrementChecking());
@@ -63,7 +63,7 @@ const Transfer = ({ destination }) => {
         </InputGroup.Append>
       </InputGroup>
       <Button variant="danger">Cancel</Button>{" "}
-      {(!isSavingsOpen && destination=="Checking")? "": <Button onClick={onSubmit} variant="success">
+      {(!isSavingsOpen && destination==="Checking")? "": <Button onClick={onSubmit} variant="success">
         Transfer to {destination}
       </Button>}
       
