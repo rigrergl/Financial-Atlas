@@ -19,21 +19,21 @@ export default function PrizeList() {
   let prizes = [
     {
       id: 1,
-      cost: 5000,
+      cost: 2000,
       name: "PS5",
       src: "./images/ps5.jpg",
       bought: false,
     },
     {
       id: 2,
-      cost: 10000,
+      cost: 2000,
       name: "Nintendo Switch",
       src: "./images/nintendo.jpg",
       bought: false,
     },
     {
       id: 3,
-      cost: 20000,
+      cost: 2000,
       name: "Xbox Series X",
       src: "./images/xboxX.jpg",
       bought: false,

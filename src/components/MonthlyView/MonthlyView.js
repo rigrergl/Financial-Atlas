@@ -35,9 +35,9 @@ export default function MonthlyView() {
   const checkingAmt = useSelector((state) => state.checkingAmt);
 
   let isSavingsOpen = round === 0;
-  const MONTHLY_INCOME = 1000;
-  const MAX_DEBT = 25000;
-  const MONTHLY_DEBT = 5000;
+  const MONTHLY_INCOME = 750;
+  const MAX_DEBT = 800;
+  const MONTHLY_DEBT = 600;
   let history = useHistory();
 
   // const converter = 1;
