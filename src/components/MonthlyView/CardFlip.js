@@ -19,7 +19,7 @@ const CardFlip = () => {
               />
             </div>
             <div className="flip-card-back">
-              <Transfer destination="Savings"/>
+              <Transfer destination="Savings" />
             </div>
           </div>
         </div>
@@ -30,11 +30,26 @@ const CardFlip = () => {
               <img
                 src="/save.png"
                 alt="Avatar"
-                style={{ width: "296px", height: "310px", marginLeft: "0" }}
+                style={{ width: "296px", height: "310px" }}
               />
             </div>
             <div className="flip-card-back">
               <Transfer destination="Checking" />
+            </div>
+          </div>
+        </div>
+        <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front">
+              <h1>Pay Debt</h1>
+              <img
+                src="/debt.jpg"
+                alt="Avatar"
+                style={{ width: "296px", height: "310px", marginLeft: "0" }}
+              />
+            </div>
+            <div className="flip-card-back">
+              <Transfer destination="debt" />
             </div>
           </div>
         </div>
