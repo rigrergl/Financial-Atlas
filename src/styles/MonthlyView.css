@@ -1,3 +1,13 @@
-.advanceButton{
-    text-align: right !important;
+.advanceButton {
+  text-align: right !important;
+}
+
+.money {
+    font-size: 5vw;
+    color: var(--primary-color);
+}
+
+.accountTitle {
+    font-size: 2vw;
+    margin-bottom: 0;
 }

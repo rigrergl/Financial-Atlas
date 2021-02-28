@@ -8,6 +8,7 @@ import Row from "react-bootstrap/Row";
 //Custom components
 import Checking from "./Checking";
 import Savings from "./Savings";
+import AccountsReport from "./AccountsReport"
 
 import "../../styles/MonthlyView.css";
 
@@ -19,10 +20,12 @@ export default function MonthlyView() {
     <div>
       <div>
         <Container>
-          <Row>
-            <Savings savingsAmt={savingsAmt}/>
-            <Checking checkingAmt={checkingAmt}/>
-          </Row>
+          {/* <Row style={{ paddingTop: "20px", paddingBottom: "70px" }}>
+            <Savings savingsAmt={savingsAmt} />
+            <Checking checkingAmt={checkingAmt} />
+          </Row> */}
+
+          <AccountsReport/>
 
           <div className="advanceButton">
             <Button>Advance Month</Button>
