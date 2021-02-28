@@ -4,7 +4,11 @@ import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 
-const Transfer = () => {
+const Transfer = ( {destination} ) => {
+  const onTransfer = () => {
+
+  }
+
   return (
     <div>
       <p>
@@ -20,7 +24,7 @@ const Transfer = () => {
         </InputGroup.Append>
       </InputGroup>
       <Button variant="danger">Cancel</Button>{" "}
-      <Button variant="success">Transfer</Button>{" "}
+      <Button variant="success">Transfer to {destination}</Button>{" "}
     </div>
   );
 };

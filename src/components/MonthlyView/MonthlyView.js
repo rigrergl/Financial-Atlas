@@ -85,9 +85,12 @@ export default function MonthlyView() {
       <div>
         <Container>
           <Row style={{ paddingTop: "20px", paddingBottom: "70px" }}>
-            <Savings savingsAmt={savingsAmt} />
-            <Income advanceMonth={advanceMonth} MONTHLY_INCOME={MONTHLY_INCOME} />
             <Checking checkingAmt={checkingAmt} />
+            <Income
+              advanceMonth={advanceMonth}
+              MONTHLY_INCOME={MONTHLY_INCOME}
+            />
+            <Savings savingsAmt={savingsAmt} />
           </Row>
 
           <SavingsOpen isSavingsOpen={isSavingsOpen} round={round} />
