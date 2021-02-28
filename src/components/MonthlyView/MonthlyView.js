@@ -21,7 +21,7 @@ export default function MonthlyView() {
 
   useEffect(() => {
     
-    fetch("http://localhost:9090/test").then(res => console.log(res)) 
+    fetch("http://localhost:9090/test").then(async res => console.log(await res.text())) 
   },[])
 
   return (
