@@ -12,17 +12,21 @@ import Debt from "./Debt";
 
 import "../../styles/MonthlyView.css";
 
-import {useEffect} from "react";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { increment } from "../../redux/actions";
 
 export default function MonthlyView() {
   const savingsAmt = 2555;
   const checkingAmt = 1354;
-  const debt = 10240;
 
-  useEffect(() => {
-    
-    fetch("http://localhost:9090/test").then(async res => console.log(await res.text())) 
-  },[])
+  // useEffect(() => {
+  //   fetch("http://localhost:9090/test").then(async (res) =>
+  //     console.log(await res.text())
+  //   );
+  // }, []);
+
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -33,10 +37,10 @@ export default function MonthlyView() {
             <Checking checkingAmt={checkingAmt} />
           </Row>
 
-          <Debt debt={debt}/>
+          <Debt />
 
           <div className="advanceButtonContainer">
-            <Button className="advanceButton">Advance Month</Button>
+            <Button onClick={() => dispatch(increment())} className="advanceButton">Advance Month</Button>
           </div>
         </Container>
       </div>

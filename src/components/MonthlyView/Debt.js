@@ -3,6 +3,8 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import { useSelector } from "react-redux";
 
 export default function Debt() {
+  const debt = useSelector((state) => state.debt);
+
   const MAX_DEBT = 25000;
   const debtPercentage = debt / MAX_DEBT;
 
@@ -12,7 +14,7 @@ export default function Debt() {
         variant="danger"
         animated
         now={debtPercentage * 100}
-        label=""
+        label={`Debt: \$${debt}`}
       />
     </div>
   );
