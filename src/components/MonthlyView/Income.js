@@ -1,7 +1,8 @@
 import Card from "react-bootstrap/Card";
 import NumberFormat from 'react-number-format';
+import Button from "react-bootstrap/Button"
 
-export default function Income( {MONTHLY_INCOME} ) {
+export default function Income( {MONTHLY_INCOME, advanceMonth} ) {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Body>
@@ -15,6 +16,9 @@ export default function Income( {MONTHLY_INCOME} ) {
             className="income"
           />
         </Card.Text>
+        <Button onClick={advanceMonth} className="advanceButton">
+              Advance Month
+            </Button>
       </Card.Body>
     </Card>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory  } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 //Bootsrap components
 import Button from "react-bootstrap/Button";
@@ -11,8 +11,8 @@ import Checking from "./Checking";
 import Savings from "./Savings";
 import Debt from "./Debt";
 import PrizeList from "./PrizeList";
-import SavingsOpen from "./SavingsOpen"
-import Income from "./Income"
+import SavingsOpen from "./SavingsOpen";
+import Income from "./Income";
 
 import Transfer from "./Transfer";
 import Welcome from "./Welcome";
@@ -20,15 +20,20 @@ import "../../styles/MonthlyView.css";
 
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { incrementDebt, decrementRound, accrueSavingsInterest, incrementChecking, decrementChecking } from "../../redux/actions";
-
+import {
+  incrementDebt,
+  decrementRound,
+  accrueSavingsInterest,
+  incrementChecking,
+  decrementChecking,
+} from "../../redux/actions";
 
 export default function MonthlyView() {
   const round = useSelector((state) => state.round);
   const debt = useSelector((state) => state.debt);
   const savingsAmt = useSelector((state) => state.savingsAmt);
   const checkingAmt = useSelector((state) => state.checkingAmt);
- 
+
   let isSavingsOpen = round === 0;
   const MONTHLY_INCOME = 1000;
   const MAX_DEBT = 25000;
@@ -50,7 +55,7 @@ export default function MonthlyView() {
     dispatch(incrementDebt());
     dispatch(decrementRound());
     dispatch(accrueSavingsInterest());
-    
+
     earnIncome();
     checkLost();
     accrueDebt();
@@ -58,24 +63,22 @@ export default function MonthlyView() {
 
   const earnIncome = () => {
     let i;
-    for(i = 0; i < MONTHLY_INCOME; i++){
+    for (i = 0; i < MONTHLY_INCOME; i++) {
       dispatch(incrementChecking());
     }
-  }
+  };
 
   const accrueDebt = () => {
-
     let i;
-    for(i = 0; i < MONTHLY_DEBT; i++)
-      dispatch(incrementDebt());
-  }
+    for (i = 0; i < MONTHLY_DEBT; i++) dispatch(incrementDebt());
+  };
 
   const checkLost = () => {
-      if(debt > MAX_DEBT){
-        console.log("lost")
-        history.push('/lose')
-      }
-  }
+    if (debt > MAX_DEBT) {
+      console.log("lost");
+      history.push("/lose");
+    }
+  };
 
   return (
     <div>
@@ -83,22 +86,17 @@ export default function MonthlyView() {
         <Container>
           <Row style={{ paddingTop: "20px", paddingBottom: "70px" }}>
             <Savings savingsAmt={savingsAmt} />
-            <Income MONTHLY_INCOME={MONTHLY_INCOME}/>
+            <Income advanceMonth={advanceMonth} MONTHLY_INCOME={MONTHLY_INCOME} />
             <Checking checkingAmt={checkingAmt} />
           </Row>
 
-          <SavingsOpen isSavingsOpen={isSavingsOpen} round={round}/>
+          <SavingsOpen isSavingsOpen={isSavingsOpen} round={round} />
 
-          <Debt MAX_DEBT={MAX_DEBT}/>
+          <Debt MAX_DEBT={MAX_DEBT} />
 
-          <div className="advanceButtonContainer">
-            <Button onClick={advanceMonth} className="advanceButton">
-              Advance Month
-            </Button>
-          </div>
-          
-          <PrizeList />
           <Welcome />
+
+          <PrizeList />
         </Container>
       </div>
     </div>
