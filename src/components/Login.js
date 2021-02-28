@@ -6,10 +6,19 @@ const Login = () => {
     <div>
       <div className="main">
         <form action="#">
-          <label>
-            First Name
-            <input type="text" />
-          </label>
+          <fieldset>
+            <legend>Welcome</legend>
+            <label>
+              First Name
+              <input type="text" />
+            </label>
+            <label>
+              Last Name
+              <input type="text" />
+            </label>
+            <br />
+            <button>Submit</button>
+          </fieldset>
         </form>
       </div>
     </div>
