@@ -8,7 +8,7 @@ import NumberFormat from "react-number-format";
 
 const Prize = ( {cost, name, src, id, buyPrize} ) => {
   return (
-    <Card style={{ height: "45vh", width: "25vw", border: "2px solid #6B8EFF" }}>
+    <Card style={{ height: "70vh", width: "20vw", border: "2px solid #6B8EFF", marginLeft:"10px", marginRight:"10px"}}>
       <Card.Img
         variant="top"
         src={src}

@@ -1,5 +1,6 @@
 import React from "react";
 import Prize from "./Prize";
+import Row from "react-bootstrap/Row"
 
 export default function PrizeList() {
   const buyPrize = (e) => {
@@ -32,16 +33,14 @@ export default function PrizeList() {
   ];
 
   return (
-    <div className="bottom">
+    <Row className="bottom">
       {prizes
         .filter((prize) => {
           if (!prize.bought) return prize;
         })
         .map(({ cost, name, src, id }) => (
-          <div key={id}>
-            <Prize id={id} cost={cost} name={name} src={src} buyPrize={buyPrize}/>
-          </div>
+            <Prize key={id} id={id} cost={cost} name={name} src={src} buyPrize={buyPrize}/>
         ))}
-    </div>
+    </Row>
   );
 }

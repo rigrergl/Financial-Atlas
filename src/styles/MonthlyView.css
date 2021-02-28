@@ -31,6 +31,7 @@
 /* Prizes CSS Below */
 .bottom {
     display: flex;
+    /* flex-direction: row; */
     justify-content: space-between;
     margin-top: 22%;
     margin-bottom: 15vh;
