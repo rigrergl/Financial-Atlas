@@ -11,6 +11,7 @@ import {
   decrementChecking,
   incrementSavings,
   decrementSavings,
+  decrementDebt,
 } from "../../redux/actions";
 
 const Transfer = ({ destination }) => {
@@ -27,6 +28,12 @@ const Transfer = ({ destination }) => {
         dispatch(decrementChecking());
         dispatch(incrementSavings());
       }      
+    }else if(destination==="debt"){
+      let i;
+      for(i = 0; i < value; i++){
+        dispatch(decrementChecking());
+        dispatch(decrementDebt());
+      } 
     }
     else if(isSavingsOpen){
       let i;
