@@ -9,7 +9,7 @@ import Row from "react-bootstrap/Row";
 import Checking from "./Checking";
 import Savings from "./Savings";
 import Debt from "./Debt";
-import Prize from "./Prize";
+import PrizeList from "./PrizeList";
 import SavingsOpen from "./SavingsOpen"
 import Income from "./Income"
 
@@ -81,7 +81,7 @@ export default function MonthlyView() {
             </Button>
           </div>
           
-          <Prize />
+          <PrizeList />
         </Container>
       </div>
     </div>
