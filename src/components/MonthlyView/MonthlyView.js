@@ -5,6 +5,8 @@ import { useHistory } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import Card from "react-bootstrap/Card"
+import Accordion from "react-bootstrap/Accordion"
 
 //Custom components
 import Checking from "./Checking";
@@ -84,6 +86,29 @@ export default function MonthlyView() {
     <div>
       <div>
         <Container>
+          <Accordion defaultActiveKey="0">
+            <Card>
+              <Card.Header>
+                <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                  Click me!
+                </Accordion.Toggle>
+              </Card.Header>
+              <Accordion.Collapse eventKey="0">
+                <Card.Body>Hello! I'm the body</Card.Body>
+              </Accordion.Collapse>
+            </Card>
+            <Card>
+              <Card.Header>
+                <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                  Click me!
+                </Accordion.Toggle>
+              </Card.Header>
+              <Accordion.Collapse eventKey="1">
+                <Card.Body>Hello! I'm another body</Card.Body>
+              </Accordion.Collapse>
+            </Card>
+          </Accordion>
+
           <Row style={{ paddingTop: "20px", paddingBottom: "70px" }}>
             <Checking checkingAmt={checkingAmt} />
             <Income
