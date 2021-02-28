@@ -1,18 +1,7 @@
-.main {
+.login {
     border-radius: 20px;
     height: 20vh;
     width: 40vh;
-    display: flex;
-    align-items: center;
-    background-color: #6b8eff;
     margin: auto;
-    margin-top: 15%;
-}
-
-.input {
-    margin-left: 20px;
-}
-
-.button {
-    width: 10vh;
+    margin-top: 18%;
 }
