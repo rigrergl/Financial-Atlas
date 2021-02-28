@@ -4,9 +4,40 @@ import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 
-const Transfer = ( {destination} ) => {
-  const onTransfer = () => {
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  incrementChecking,
+  decrementChecking,
+  incrementSavings,
+  decrementSavings,
+} from "../../redux/actions";
 
+const Transfer = ({ destination }) => {
+  const [value, setValue] = useState(0);
+  const dispatch = useDispatch();
+
+  const onSubmit = (e) => {
+    console.log(value);
+    if(destination=="Savings"){
+      let i;
+      for(i = 0; i < value; i++){
+        dispatch(decrementChecking());
+        dispatch(incrementSavings());
+      }      
+    }
+    else {
+      let i;
+      for(i = 0; i < value; i++){
+        dispatch(decrementSavings());
+        dispatch(incrementChecking());
+      }  
+    }
+  };
+
+
+  const onChange = (e) => {
+      setValue(e.target.value)
   }
 
   return (
@@ -18,13 +49,21 @@ const Transfer = ( {destination} ) => {
         <InputGroup.Prepend>
           <InputGroup.Text>$</InputGroup.Text>
         </InputGroup.Prepend>
-        <FormControl aria-label="Amount (to the nearest dollar)" />
+        <FormControl
+          onChange={onChange}
+
+          id="input"
+          type="number"
+          aria-label="Amount (to the nearest dollar)"
+        />
         <InputGroup.Append>
           <InputGroup.Text>.00</InputGroup.Text>
         </InputGroup.Append>
       </InputGroup>
       <Button variant="danger">Cancel</Button>{" "}
-      <Button variant="success">Transfer to {destination}</Button>{" "}
+      <Button onClick={onSubmit} variant="success">
+        Transfer to {destination}
+      </Button>{" "}
     </div>
   );
 };
