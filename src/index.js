@@ -5,18 +5,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import {createStore} from 'redux';
+import { createStore } from "redux";
+import allReducers from "./redux/reducers/index"
 
 //Things to keep in store: Debt, CheckingAmt, SavingsAmt, prizeNum
 
-// const store = createStore();
-
-
+const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <Provider store={store}> */}
-      <App />
+    <App />
     {/* </Provider> */}
   </React.StrictMode>,
   document.getElementById("root")

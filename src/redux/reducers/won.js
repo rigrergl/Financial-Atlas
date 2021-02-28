@@ -1,4 +1,4 @@
-const lost = (state = false, action) => {
+const won = (state = false, action) => {
   switch (action.type) {
     case "SET_LOST":
       return !state;
@@ -6,4 +6,4 @@ const lost = (state = false, action) => {
       return state;
   }
 };
-export default lost;
+export default won;
