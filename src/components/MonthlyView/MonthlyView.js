@@ -12,10 +12,17 @@ import Debt from "./Debt";
 
 import "../../styles/MonthlyView.css";
 
+import {useEffect} from "react";
+
 export default function MonthlyView() {
   const savingsAmt = 2555;
   const checkingAmt = 1354;
   const debt = 10240;
+
+  useEffect(() => {
+    
+    fetch("http://localhost:9090/test").then(res => console.log(res)) 
+  },[])
 
   return (
     <div>

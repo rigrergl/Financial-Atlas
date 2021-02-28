@@ -6,42 +6,11 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import {createStore} from 'redux';
-// import store from "./redux/store";
-// import { Provider } from "react-redux";
 
-//Things to keep in store: Debt, CheckingAmt, SavingsAmt
+//Things to keep in store: Debt, CheckingAmt, SavingsAmt, prizeNum
 
-//ACTIONS
-const increment = () => {
-  return {
-    type: "INCREMENT",
-  };
-};
+// const store = createStore();
 
-const decrement = () => {
-  return {
-    type: "DECREMENT",
-  };
-};
-
-//REDUCER
-const debt = (state = 0, action) => {
-  switch (action.type) {
-    case "INCREMENT":
-      return state + 1;
-    case "DECREMENT":
-      return state - 1;
-  }
-};
-
-let store = createStore(debt);
-
-//display it in the console
-store.subscribe(() => console.log(store.getState()));
-
-//DISPATCH
-store.dispatch(increment());
-store.dispatch(increment());
 
 
 ReactDOM.render(
