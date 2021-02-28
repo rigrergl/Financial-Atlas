@@ -12,7 +12,7 @@ export default function Debt({ MAX_DEBT }) {
         variant="danger"
         animated
         now={debtRatio * 100}
-        label={`Debt: \$${debt}`}
+        label={`Bills: \$${debt}`}
       />
     </div>
   );
