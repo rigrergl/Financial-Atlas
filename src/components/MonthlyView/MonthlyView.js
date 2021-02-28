@@ -11,6 +11,7 @@ import Savings from "./Savings";
 import Debt from "./Debt";
 import Prize from "./Prize";
 import SavingsOpen from "./SavingsOpen"
+import Income from "./Income"
 
 import "../../styles/MonthlyView.css";
 
@@ -61,6 +62,9 @@ export default function MonthlyView() {
               Advance Month
             </Button>
           </div>
+
+          <Income />
+          
           <Prize />
         </Container>
       </div>
