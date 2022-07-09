@@ -8,14 +8,15 @@ Little buggy here and there, it's funny looking back this app. I did not make an
 # Link to deployed site: 
 [Financial Atlas Live Site](financial-atlas-lud4ol1ae-rigrergl.vercel.app)
 
+# How Log in
+**Username**: Rigre
+
+**Password**: Garciandia
+
 # How to run locally
 - `yarn`
 - `yarn start`
 
 *Note: you have to have yarn installed in your local computer
 
-# How Log in
-**Username**: Rigre
-
-**Password**: Garciandia
 
