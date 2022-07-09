@@ -5,6 +5,8 @@
 - `yarn`
 - `yarn start`
 
+*Note: you have to have yarn installed in your local computer
+
 # How Log in
 **Username**: Rigre
 
