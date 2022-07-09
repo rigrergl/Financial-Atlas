@@ -6,7 +6,7 @@ This won me and my friends $1000
 Little buggy here and there, it's funny looking back this app. I did not make any modifications after the Hackathon was over. Maybe I'll come back at clean it up a little some day
 
 # Link to deployed site: 
-[Financial Atlas Live Site](financial-atlas-lud4ol1ae-rigrergl.vercel.app)
+[Financial Atlas Live Site](https://financial-atlas.vercel.app/)
 
 # How Log in
 **Username**: Rigre
