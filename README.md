@@ -2,9 +2,10 @@
 - `yarn`
 - `yarn start`
 
-# How log in
-Username: Rigre
-Password: Garciandia
+# How Log in
+**Username**: Rigre
+
+**Password**: Garciandia
 
 # Getting Started with Create React App
 
