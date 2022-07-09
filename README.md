@@ -1,5 +1,8 @@
+# Link to demo view
+[Financial Atlas Demo](https://youtu.be/UeQ6Z9IXIr4)
+
 # Link to deployed site: 
-[Financial Atlas](financial-atlas-lud4ol1ae-rigrergl.vercel.app)
+[Financial Atlas Live Site](financial-atlas-lud4ol1ae-rigrergl.vercel.app)
 
 # How to run locally
 - `yarn`
